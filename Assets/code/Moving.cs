@@ -36,7 +36,7 @@ public class Moving : MonoBehaviour
     {
         Debug.Log("Hit");
         _moove = false;
-        Instantiate(Versus_img);
+        Versus_img.SetActive(true);
         _speed = 0;
     }
 }
