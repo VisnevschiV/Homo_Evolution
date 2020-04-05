@@ -6,9 +6,6 @@ public class Buttons_Evolue : MonoBehaviour
 {
     public GameObject[] _buttons;
 
-    // Start is called before the first frame update
-  
-
     public void Press()
     {
         
