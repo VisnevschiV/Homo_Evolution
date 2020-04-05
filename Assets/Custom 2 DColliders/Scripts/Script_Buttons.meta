@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: f09d0ba61e334cf45825740af5dced49
+=======
+<<<<<<< Updated upstream:Assets/Custom 2 DColliders.meta
+guid: f5648e51ff95a15439edca0012203556
+=======
+guid: f09d0ba61e334cf45825740af5dced49
+>>>>>>> Stashed changes:Assets/Custom 2 DColliders/Scripts/Script_Buttons.meta
+>>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
