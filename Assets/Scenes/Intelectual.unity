@@ -613,8 +613,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< Updated upstream
-=======
       - m_Target: {fileID: 113597917}
         m_MethodName: Press
         m_Mode: 1
@@ -626,7 +624,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
->>>>>>> Stashed changes
 --- !u!114 &113597915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,8 +660,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113597912}
   m_CullTransparentMesh: 0
-<<<<<<< Updated upstream
-=======
 --- !u!114 &113597917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,7 +685,6 @@ MonoBehaviour:
   - {fileID: 1712440368}
   - {fileID: 643708881}
   - {fileID: 653703081}
->>>>>>> Stashed changes
 --- !u!1 &130312696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,13 +1312,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: text
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 1968083474243504, guid: 8bb3877c9114c61468dc7ab188ea5607, type: 3}
       propertyPath: m_Name
       value: creativity
       objectReference: {fileID: 0}
-=======
->>>>>>> Stashed changes
     - target: {fileID: 4301111117635540, guid: 8bb3877c9114c61468dc7ab188ea5607, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2314,8 +2305,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< Updated upstream
-=======
       - m_Target: {fileID: 643708886}
         m_MethodName: Press
         m_Mode: 1
@@ -2327,7 +2316,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
->>>>>>> Stashed changes
 --- !u!114 &643708884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2364,8 +2352,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643708881}
   m_CullTransparentMesh: 0
-<<<<<<< Updated upstream
-=======
 --- !u!114 &643708886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2385,7 +2371,6 @@ MonoBehaviour:
   - {fileID: 678438093}
   - {fileID: 1851733991}
   - {fileID: 101146200}
->>>>>>> Stashed changes
 --- !u!1 &653703081
 GameObject:
   m_ObjectHideFlags: 0
@@ -3145,13 +3130,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: text
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 1821482137000260, guid: 0e134acc8bd6240449ee7b4887912959, type: 3}
       propertyPath: m_Name
       value: weapons
       objectReference: {fileID: 0}
-=======
->>>>>>> Stashed changes
     - target: {fileID: 4864448022557852, guid: 0e134acc8bd6240449ee7b4887912959, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3661,8 +3643,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< Updated upstream
-=======
       - m_Target: {fileID: 1192328211}
         m_MethodName: Press
         m_Mode: 1
@@ -3674,7 +3654,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
->>>>>>> Stashed changes
 --- !u!114 &1192328209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3711,8 +3690,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192328206}
   m_CullTransparentMesh: 0
-<<<<<<< Updated upstream
-=======
 --- !u!114 &1192328211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3728,7 +3705,6 @@ MonoBehaviour:
   _buttons:
   - {fileID: 873010612}
   - {fileID: 1356731429}
->>>>>>> Stashed changes
 --- !u!1001 &1196736391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4281,8 +4257,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< Updated upstream
-=======
       - m_Target: {fileID: 1438118810}
         m_MethodName: Press
         m_Mode: 1
@@ -4294,7 +4268,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
->>>>>>> Stashed changes
 --- !u!114 &1438118808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4331,8 +4304,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438118805}
   m_CullTransparentMesh: 0
-<<<<<<< Updated upstream
-=======
 --- !u!114 &1438118810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4350,7 +4321,6 @@ MonoBehaviour:
   - {fileID: 407956723}
   - {fileID: 328619428}
   - {fileID: 605652031}
->>>>>>> Stashed changes
 --- !u!1 &1506877938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1763147951537038, guid: c2c81284c0f29e54baf9b5fcfa0a4053,
@@ -5578,8 +5548,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< Updated upstream
-=======
       - m_Target: {fileID: 2014288999}
         m_MethodName: Press
         m_Mode: 1
@@ -5591,7 +5559,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
->>>>>>> Stashed changes
 --- !u!114 &2014288997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5628,8 +5595,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014288994}
   m_CullTransparentMesh: 0
-<<<<<<< Updated upstream
-=======
 --- !u!114 &2014288999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5645,7 +5610,6 @@ MonoBehaviour:
   _buttons:
   - {fileID: 796415001}
   - {fileID: 1768780944}
->>>>>>> Stashed changes
 --- !u!1 &2070247912
 GameObject:
   m_ObjectHideFlags: 0
@@ -5822,8 +5786,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< Updated upstream
-=======
       - m_Target: {fileID: 2103987802}
         m_MethodName: Press
         m_Mode: 1
@@ -5835,7 +5797,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
->>>>>>> Stashed changes
 --- !u!114 &2103987800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5870,10 +5831,6 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-  m_GameObject: {fileID: 2103987797}
-  m_CullTransparentMesh: 0
-=======
   m_GameObject: {fileID: 2103987797}
   m_CullTransparentMesh: 0
 --- !u!114 &2103987802
@@ -5893,7 +5850,6 @@ MonoBehaviour:
   - {fileID: 780852117}
   - {fileID: 1184214259}
   - {fileID: 916299955}
->>>>>>> Stashed changes
 --- !u!1 &2105406386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1538952076802876, guid: 6ea8b2ad17c341442bde2ad0c640b70e,
