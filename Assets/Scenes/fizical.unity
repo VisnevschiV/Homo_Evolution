@@ -2273,6 +2273,7 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 965543306}
   m_CullTransparentMesh: 0
 --- !u!114 &965543311
@@ -2290,6 +2291,7 @@ MonoBehaviour:
   _buttons:
   - {fileID: 2113871414}
   - {fileID: 1643992792}
+
 --- !u!1 &1018925359
 GameObject:
   m_ObjectHideFlags: 0
@@ -3296,6 +3298,7 @@ GameObject:
   - component: {fileID: 1317811819}
   - component: {fileID: 1317811818}
   - component: {fileID: 1317811821}
+  - component: {fileID: 1317811822}
   m_Layer: 5
   m_Name: endurance
   m_TagString: Untagged
@@ -3366,6 +3369,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1317811821}
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1317811822}
         m_MethodName: Press
         m_Mode: 1
         m_Arguments:
@@ -3421,14 +3435,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1317811816}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de8232641382e040a8c7f6c3a5d3015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 803744979}
+  Evolve_button: {fileID: 143315209}
+--- !u!114 &1317811822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317811816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d316e049ae479e4697d177cb92bde1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _buttons:
   - {fileID: 1300598700}
   - {fileID: 1124142100}
-  - {fileID: 1503769953}
   - {fileID: 1890536887}
+  - {fileID: 1503769953}
 --- !u!1 &1333979998
 GameObject:
   m_ObjectHideFlags: 0
@@ -3892,7 +3920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1503769954
 Transform:
   m_ObjectHideFlags: 0
@@ -4527,6 +4555,7 @@ GameObject:
   - component: {fileID: 1709935242}
   - component: {fileID: 1709935241}
   - component: {fileID: 1709935244}
+  - component: {fileID: 1709935245}
   m_Layer: 5
   m_Name: running
   m_TagString: Untagged
@@ -4597,6 +4626,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1709935244}
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1709935245}
         m_MethodName: Press
         m_Mode: 1
         m_Arguments:
@@ -4657,6 +4697,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info: {fileID: 1409786723}
   Evolve_button: {fileID: 143315209}
+--- !u!114 &1709935245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709935239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d316e049ae479e4697d177cb92bde1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttons:
+  - {fileID: 1317811816}
+  - {fileID: 914293096}
 --- !u!1 &1715100346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4750,6 +4805,7 @@ GameObject:
   - component: {fileID: 1834198379}
   - component: {fileID: 1834198378}
   - component: {fileID: 1834198377}
+  - component: {fileID: 1834198381}
   - component: {fileID: 1834198380}
   m_Layer: 5
   m_Name: biped
@@ -4821,6 +4877,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1834198380}
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1834198381}
         m_MethodName: Press
         m_Mode: 1
         m_Arguments:
@@ -4881,6 +4948,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info: {fileID: 576723010}
   Evolve_button: {fileID: 143315209}
+--- !u!114 &1834198381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834198375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d316e049ae479e4697d177cb92bde1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttons:
+  - {fileID: 965543306}
+  - {fileID: 860169376}
+  - {fileID: 710386963}
+  - {fileID: 1495808565}
+  - {fileID: 776035202}
+  - {fileID: 1709935239}
+  - {fileID: 2007744914}
+  - {fileID: 1060928336}
+  - {fileID: 1715100346}
+  - {fileID: 1131461836}
+  - {fileID: 533377694}
+  - {fileID: 2095776297}
 --- !u!1 &1872970757
 GameObject:
   m_ObjectHideFlags: 0
@@ -5843,4 +5935,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121093112}
   m_CullTransparentMesh: 0
+
+
 
