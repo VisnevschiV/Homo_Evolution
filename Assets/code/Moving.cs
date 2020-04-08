@@ -1,19 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.U2D;
 
 public class Moving : MonoBehaviour
 {
-    public GameObject Versus_img;
-    public float _speed;  
+    [SerializeField] private GameObject _traces;
+    [SerializeField] private GameObject _ObjectRotate;
     private bool _moove;
     private Vector3 _target;
+    private bool _finish = true;
+    public GameObject Versus_img;
+    public float speed;
 
-    // Update is called once per frame
+
     void Update()
     {
-        // Aici e miscarea player-ului
         if (Input.GetMouseButtonDown(0))
         {
             _target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -25,8 +29,32 @@ public class Moving : MonoBehaviour
         }
         if(_moove == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, _target, _speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, _target, speed * Time.deltaTime);
+           TracesInstantiate(_finish);
+           
         }
+
+    }
+
+    private void TracesInstantiate(bool finish)
+    {
+        
+        if (finish == true)
+            StartCoroutine(Treas());
+        _finish = false;
+    }
+
+    IEnumerator Treas()
+    {
+
+        Instantiate(_traces, transform.position, _ObjectRotate.transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        _finish = true;
+    }
+
+    float AngleBetweenTwoPoints(float a, float b)
+    {
+        return Mathf.Atan2(b,a) * Mathf.Rad2Deg;
     }
 
 
@@ -37,6 +65,6 @@ public class Moving : MonoBehaviour
         Debug.Log("Hit");
         _moove = false;
         Versus_img.SetActive(true);
-        _speed = 0;
+        speed = 0;
     }
 }
