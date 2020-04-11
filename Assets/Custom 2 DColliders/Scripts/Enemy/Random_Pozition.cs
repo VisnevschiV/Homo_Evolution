@@ -11,6 +11,9 @@ public class Random_Pozition : MonoBehaviour
     [SerializeField] private int minY;
     [SerializeField] private int speed;
 
+    [SerializeField] private GameObject _traces;
+    private Quaternion rotate;
+
     [SerializeField] private int breakMaxX;
     [SerializeField] private int breakMinX;
     [SerializeField] private int breakMaxY;
@@ -29,6 +32,9 @@ public class Random_Pozition : MonoBehaviour
                 reachPoint = !reachPoint;
                 int breakX = Random.Range(breakMinX, breakMaxX);
                 int breakY = Random.Range(breakMinY, breakMaxY);
+                Vector2 directionPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+                float angle = Mathf.Atan2(directionPoint.y, directionPoint.x) * Mathf.Rad2Deg;
+                rotate = Quaternion.AngleAxis(angle, Vector3.forward);
                 StartCoroutine(StartMove(breakX,breakY));
             }
             else
@@ -42,14 +48,19 @@ public class Random_Pozition : MonoBehaviour
         {
             if (reachPoint == true)
             {
+                
                 reachPoint = !reachPoint;
                 int randomX = Random.Range(minX, maxX);
                 int randomY = Random.Range(minY, maxY);
+                Vector2 directionPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+                float angle = Mathf.Atan2(directionPoint.y, directionPoint.x) * Mathf.Rad2Deg;
+                rotate = Quaternion.AngleAxis(angle, Vector3.forward);
+                
                 StartCoroutine(StartMove(randomX, randomY));
             }
             else
             {
-
+                StartCoroutine(Start());
                 reachPoint = false;
             }
         }
@@ -57,6 +68,7 @@ public class Random_Pozition : MonoBehaviour
 
     IEnumerator StartMove(int pozitionX, int pozitionY)
     {
+        
         Vector2 distance=new Vector2(pozitionX,pozitionY);
         while (Vector2.Distance(transform.position, distance) > 0.5f)
         {
@@ -65,5 +77,18 @@ public class Random_Pozition : MonoBehaviour
         }
         yield return new WaitForSeconds(1f);
         reachPoint = true;
+    }
+
+    IEnumerator Start()
+    {
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(Treas());
+    }
+
+    IEnumerator Treas()
+    {
+        yield return new WaitForSeconds(1f);
+        Instantiate(_traces, transform.position, rotate);
+       
     }
 }
