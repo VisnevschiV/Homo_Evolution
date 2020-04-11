@@ -12,7 +12,7 @@ public class Random_Pozition : MonoBehaviour
     [SerializeField] private int speed;
 
     [SerializeField] private GameObject _traces;
-    private Quaternion rotate;
+    private bool _finish = true;
 
     [SerializeField] private int breakMaxX;
     [SerializeField] private int breakMinX;
@@ -32,13 +32,12 @@ public class Random_Pozition : MonoBehaviour
                 reachPoint = !reachPoint;
                 int breakX = Random.Range(breakMinX, breakMaxX);
                 int breakY = Random.Range(breakMinY, breakMaxY);
-                Vector2 directionPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                float angle = Mathf.Atan2(directionPoint.y, directionPoint.x) * Mathf.Rad2Deg;
-                rotate = Quaternion.AngleAxis(angle, Vector3.forward);
+               
                 StartCoroutine(StartMove(breakX,breakY));
             }
             else
             {
+                Start(_finish);
                 reachPoint = false;
             }
 
@@ -52,15 +51,13 @@ public class Random_Pozition : MonoBehaviour
                 reachPoint = !reachPoint;
                 int randomX = Random.Range(minX, maxX);
                 int randomY = Random.Range(minY, maxY);
-                Vector2 directionPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                float angle = Mathf.Atan2(directionPoint.y, directionPoint.x) * Mathf.Rad2Deg;
-                rotate = Quaternion.AngleAxis(angle, Vector3.forward);
+              
                 
                 StartCoroutine(StartMove(randomX, randomY));
             }
             else
             {
-                StartCoroutine(Start());
+                
                 reachPoint = false;
             }
         }
@@ -79,16 +76,18 @@ public class Random_Pozition : MonoBehaviour
         reachPoint = true;
     }
 
-    IEnumerator Start()
+    private void Start(bool _finish)
     {
-        yield return new WaitForSeconds(1f);
-        StartCoroutine(Treas());
+        if (_finish == true)
+            StartCoroutine(Treas());
+        _finish = false;
     }
 
     IEnumerator Treas()
     {
+        Instantiate(_traces, transform.position,transform.rotation );
         yield return new WaitForSeconds(1f);
-        Instantiate(_traces, transform.position, rotate);
-       
+        _finish = true;
+
     }
 }
