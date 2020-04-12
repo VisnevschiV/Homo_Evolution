@@ -12,18 +12,18 @@ public class Random_Pozition : MonoBehaviour
     [SerializeField] private int speed;
 
     [SerializeField] private GameObject _traces;
-    private bool _finish = true;
 
     [SerializeField] private int breakMaxX;
     [SerializeField] private int breakMinX;
     [SerializeField] private int breakMaxY;
     [SerializeField] private int breakMinY;
-
+   public bool _finish = true; 
     private int likelyToBreakTheLimit;
 
     private bool reachPoint=true;
     void Update()
     {
+        
         likelyToBreakTheLimit = Random.Range(-1, 101);
         if (likelyToBreakTheLimit <= 5)
         {
@@ -32,12 +32,11 @@ public class Random_Pozition : MonoBehaviour
                 reachPoint = !reachPoint;
                 int breakX = Random.Range(breakMinX, breakMaxX);
                 int breakY = Random.Range(breakMinY, breakMaxY);
-               
                 StartCoroutine(StartMove(breakX,breakY));
             }
             else
             {
-                Start(_finish);
+                Start();
                 reachPoint = false;
             }
 
@@ -49,17 +48,16 @@ public class Random_Pozition : MonoBehaviour
             {
                 
                 reachPoint = !reachPoint;
-                int randomX = Random.Range(minX, maxX);
-                int randomY = Random.Range(minY, maxY);
-              
-                
+                var  randomX = Random.Range(minX, maxX);
+                var  randomY = Random.Range(minY, maxY);
                 StartCoroutine(StartMove(randomX, randomY));
             }
             else
             {
-                
+                Start();
                 reachPoint = false;
             }
+                
         }
     }
 
@@ -76,7 +74,7 @@ public class Random_Pozition : MonoBehaviour
         reachPoint = true;
     }
 
-    private void Start(bool _finish)
+    public void Start()
     {
         if (_finish == true)
             StartCoroutine(Treas());
@@ -86,7 +84,7 @@ public class Random_Pozition : MonoBehaviour
     IEnumerator Treas()
     {
         Instantiate(_traces, transform.position,transform.rotation );
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         _finish = true;
 
     }
