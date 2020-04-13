@@ -15,6 +15,7 @@ TagManager:
   - stone
   - fire
   - neighbors
+  - enemy
   layers:
   - Default
   - TransparentFX

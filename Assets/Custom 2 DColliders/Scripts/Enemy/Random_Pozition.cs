@@ -17,7 +17,7 @@ public class Random_Pozition : MonoBehaviour
     [SerializeField] private int breakMinX;
     [SerializeField] private int breakMaxY;
     [SerializeField] private int breakMinY;
-   public bool _finish = true; 
+    bool _finish = true; 
     private int likelyToBreakTheLimit;
 
     private bool reachPoint=true;
@@ -83,9 +83,15 @@ public class Random_Pozition : MonoBehaviour
 
     IEnumerator Treas()
     {
+
         Instantiate(_traces, transform.position,transform.rotation );
         yield return new WaitForSeconds(0.5f);
         _finish = true;
 
+    }
+
+    public void Speed(int amount)
+    {
+        speed = amount;
     }
 }
