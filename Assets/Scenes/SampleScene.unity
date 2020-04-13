@@ -1275,6 +1275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _traces: {fileID: 6196021676451710600, guid: 6b7e4bf0776a96144bed3c925a8c5f3a, type: 3}
   _buttons: {fileID: 2632037153121588420}
+  _speedEnemy: 10
   Versus_img: {fileID: 1475412112}
   speed: 10
 --- !u!1 &1440358420
