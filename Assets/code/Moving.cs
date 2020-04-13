@@ -7,6 +7,7 @@ using UnityEngine.U2D;
 public class Moving : MonoBehaviour
 {
     [SerializeField] private GameObject _traces;
+    [SerializeField] private GameObject _buttons;
     private bool _moove;
     private Vector3 _target;
     private bool _finish = true;
@@ -58,6 +59,7 @@ public class Moving : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Hit");
+        _buttons.SetActive(true);
         _moove = false;
         Versus_img.SetActive(true);
         speed = 0;
