@@ -127,6 +127,7 @@ MonoBehaviour:
   minY: -146
   speed: 10
   _traces: {fileID: 3707142599703734410, guid: f146b3d595021d84e9a37eb66efb4c54, type: 3}
+  _distanceToAtack: 10
   breakMaxX: -81
   breakMinX: -105
   breakMaxY: -152
