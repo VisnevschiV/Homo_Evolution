@@ -12,7 +12,8 @@ public class Random_Pozition : MonoBehaviour
     [SerializeField] private int speed;
 
     [SerializeField] private GameObject _traces;
-
+    private GameObject _player;
+    [SerializeField] private float _distanceToAtack;
     [SerializeField] private int breakMaxX;
     [SerializeField] private int breakMinX;
     [SerializeField] private int breakMaxY;
@@ -21,44 +22,58 @@ public class Random_Pozition : MonoBehaviour
     private int likelyToBreakTheLimit;
 
     private bool reachPoint=true;
+
+    public void Start()
+    {
+        _player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     void Update()
     {
-        
-        likelyToBreakTheLimit = Random.Range(-1, 101);
-        if (likelyToBreakTheLimit <= 5)
+        if (Vector2.Distance(transform.localPosition, _player.transform.position) < _distanceToAtack)
         {
-            if (reachPoint == true)
-            {
-                reachPoint = !reachPoint;
-                int breakX = Random.Range(breakMinX, breakMaxX);
-                int breakY = Random.Range(breakMinY, breakMaxY);
-                StartCoroutine(StartMove(breakX,breakY));
-            }
+            transform.localPosition = Vector2.MoveTowards(transform.localPosition, _player.transform.position,
+                speed * Time.deltaTime);
+        }
             else
+        {
+            likelyToBreakTheLimit = Random.Range(-1, 101);
+            if (likelyToBreakTheLimit <= 5)
             {
-                Start();
-                reachPoint = false;
-            }
+                if (reachPoint == true)
+                {
+                    reachPoint = !reachPoint;
+                    int breakX = Random.Range(breakMinX, breakMaxX);
+                    int breakY = Random.Range(breakMinY, breakMaxY);
+                    StartCoroutine(StartMove(breakX, breakY));
+                }
+                else
+                {
+                    Starts();
+                    reachPoint = false;
+                }
 
-            
-        }
-        else
-        {
-            if (reachPoint == true)
-            {
-                
-                reachPoint = !reachPoint;
-                var  randomX = Random.Range(minX, maxX);
-                var  randomY = Random.Range(minY, maxY);
-                StartCoroutine(StartMove(randomX, randomY));
+
             }
             else
             {
-                Start();
-                reachPoint = false;
+                if (reachPoint == true)
+                {
+
+                    reachPoint = !reachPoint;
+                    var randomX = Random.Range(minX, maxX);
+                    var randomY = Random.Range(minY, maxY);
+                    StartCoroutine(StartMove(randomX, randomY));
+                }
+                else
+                {
+                    Starts();
+                    reachPoint = false;
+                }
+
             }
-                
         }
+           
     }
 
     IEnumerator StartMove(int pozitionX, int pozitionY)
@@ -74,7 +89,7 @@ public class Random_Pozition : MonoBehaviour
         reachPoint = true;
     }
 
-    public void Start()
+    public void Starts()
     {
         if (_finish == true)
             StartCoroutine(Treas());

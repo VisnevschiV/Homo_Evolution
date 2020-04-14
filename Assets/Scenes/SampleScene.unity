@@ -449,7 +449,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73114f19c8e83b446a64e7b4be13e696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomLerpSpeed: 100
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -501,8 +500,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0.08, z: -10}
-  m_LocalScale: {x: -6.2068143, y: 8.392524, z: 1}
+  m_LocalPosition: {x: -0.029999875, y: 0.07999574, z: -10}
+  m_LocalScale: {x: -6.206814, y: 8.392524, z: 1}
   m_Children: []
   m_Father: {fileID: 1375872765}
   m_RootOrder: 0
@@ -1497,7 +1496,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1617132897}
   - component: {fileID: 1617132898}
-  - component: {fileID: 1617132899}
   m_Layer: 0
   m_Name: Visual Stuff
   m_TagString: Player
@@ -1543,20 +1541,7 @@ MonoBehaviour:
   - {fileID: 802833099}
   Bear: {fileID: 1290826566484310672, guid: d18e2b6d03da9a94b8ecc68e4d20bb0a, type: 3}
   timeBetwenSpawn: 3
---- !u!114 &1617132899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617132896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6baa901f042be1d449b417cf8874a78b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _distanceToAtack: 10
-  _speed: 3
+  _maxNumberOfBears: 5
 --- !u!1 &1716067071
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.U2D.Sprites;
 using UnityEngine;
 using UnityEngine.U2D;
 using Random = UnityEngine.Random;
@@ -17,12 +16,12 @@ public class Moving : MonoBehaviour
     public GameObject Versus_img;
     public float speed;
     private Quaternion rotate;
-    private bool _lowSpeed;
+    private bool _lowSpeed=false;
 
 
     void Update()
     {
-        Speed();
+       Speed();
         Vector2 directionPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float angle = Mathf.Atan2(directionPoint.y, directionPoint.x) * Mathf.Rad2Deg;
         rotate = Quaternion.AngleAxis(angle-90, Vector3.forward);
@@ -54,21 +53,28 @@ public class Moving : MonoBehaviour
 
     IEnumerator Treas()
     {
-        _lowSpeed = true;
+       
         Instantiate(_traces, transform.position, rotate);
         yield return new WaitForSeconds(0.5f);
         _finish = true;
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Hit");
-        
-        _buttons.SetActive(true);
-        _moove = false;
-        Versus_img.SetActive(true);
-        speed = 0;
+        if (collision.collider.tag == "enemy")
+        {
+            _lowSpeed = true;
+            Debug.Log("Hit");
+            _buttons.SetActive(true);
+            _moove = false;
+            Versus_img.SetActive(true);
+            speed = 0;
+        }
+        else
+        {
+            _lowSpeed = false;
+        }
     }
 
             
@@ -83,5 +89,7 @@ public class Moving : MonoBehaviour
                 p.gameObject.GetComponent<Random_Pozition>().Speed(1);
             }
         }
+
+        
     }
 }
